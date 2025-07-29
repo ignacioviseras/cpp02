@@ -11,9 +11,9 @@ class Fixed {
 		static const int _fractional = 8;  // Número de bits fraccionales
 
 	public:
-		Fixed();                            // Constructor por defecto
-		Fixed(const Fixed &other);         // Constructor por copia
-		Fixed& operator=(const Fixed &other); // Operador de asignación
+		Fixed();
+		Fixed(const Fixed &other);
+		Fixed& operator=(const Fixed &other);
 
 		// Operadores de comparación
 		bool operator<(const Fixed& other) const;
@@ -41,16 +41,16 @@ class Fixed {
 		static Fixed& max(Fixed& a, Fixed& b);
 		static const Fixed& max(const Fixed& a, const Fixed& b);
 
-		~Fixed();                           // Destructor
+		~Fixed();
 
-		Fixed(const int num);              // Constructor desde int
-		Fixed(const float num);            // Constructor desde float
+		Fixed(const int num);
+		Fixed(const float num);
 
-		float toFloat(void) const;         // Conversión a float
-		int toInt(void) const;             // Conversión a int
+		float toFloat(void) const;
+		int toInt(void) const;
 
-		int getRawBits(void) const;        // Getter raw
-		void setRawBits(int const raw);    // Setter raw
+		int getRawBits(void) const;
+		void setRawBits(int const raw);
 };
 
 // Sobrecarga del operador de inserción para imprimir objetos Fixed

@@ -11,19 +11,19 @@ class Fixed {
 		static const int _fractional = 8;
 
 	public:
-		Fixed();                            // Constructor por defecto
-		Fixed(const Fixed &other);         // Constructor por copia
-		Fixed &operator=(const Fixed &other); // Operador de asignación
-		~Fixed();                           // Destructor
+		Fixed();                   
+		Fixed(const Fixed &other);
+		Fixed &operator=(const Fixed &other);
+		~Fixed();
 
-		Fixed(const int num);              // Constructor desde int
-		Fixed(const float num);            // Constructor desde float
+		Fixed(const int num);             
+		Fixed(const float num);           
 
-		float toFloat(void) const;         // Conversión a float
-		int toInt(void) const;             // Conversión a int
+		float toFloat(void) const;        
+		int toInt(void) const;            
 
-		int getRawBits(void) const;        // Getter raw
-		void setRawBits(int const raw);    // Setter raw
+		int getRawBits(void) const;
+		void setRawBits(int const raw);
 };
 
 std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
